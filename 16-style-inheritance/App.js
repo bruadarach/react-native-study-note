@@ -3,10 +3,11 @@ import { View, Text, StyleSheet } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
+      {/* RN does not support <View> to <Text> style inheritance */}
       <View style={styles.darkMode}>
         <Text style={styles.darkModeText}>
           Style Inheritance
-          {/* both bold and white */}
+          {/* RN support <Text> to <Text> style inheritance */}
           <Text style={styles.boldText}>in bold</Text>
         </Text>
       </View>
